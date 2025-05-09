@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <style>
+        /* Estilos generales */
+        :root {
+            --color-primario: #2c3e50;
+            --color-secundario: #3498db;
+            --color-fondo: #f9f9f9;
+            --color-texto: #333;
+            --color-blanco: #fff;
+            --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-secundario);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--color-primario);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: var(--color-primario);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        /* Header y navegación */
+        header {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--sombra);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .menu li {
+            margin-left: 30px;
+        }
+        
+        .menu a {
+            color: var(--color-blanco);
+            font-weight: 500;
+        }
+        
+        .menu a:hover {
+            color: var(--color-secundario);
+        }
+        
+        /* Sección Inicio */
+        #inicio {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./pngtree-sleek-and-sophisticated-nighttime-workspace-rendered-modern-dark-private-office-or-picture-image_5833107.jpg') no-repeat center center/cover;
+            color: var(--color-blanco);
+            text-align: center;
+        }
+        
+        .contenido-inicio {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contenido-inicio h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .contenido-inicio p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .foto-perfil {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--color-secundario);
+            margin-bottom: 30px;
+        }
+        
+        /* Sección Sobre mí */
+        #sobre-mi {
+            background-color: var(--color-blanco);
+        }
+        
+        .grid-sobre-mi {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .habilidades {
+            margin-top: 30px;
+        }
+        
+        .habilidad {
+            margin-bottom: 15px;
+        }
+        
+        .barra-habilidad {
+            height: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        .nivel-habilidad {
+            height: 100%;
+            background-color: var(--color-secundario);
+            border-radius: 5px;
+        }
+        
+        /* Sección CV */
+        #cv {
+            background-color: var(--color-fondo);
+        }
+        
+        .cv-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            background-color: var(--color-blanco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+        }
+        
+        .cv-lateral {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .cv-lateral h3 {
+            color: var(--color-blanco);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .cv-principal h3 {
+            border-bottom: 2px solid var(--color-secundario);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .experiencia-item, .educacion-item {
+            margin-bottom: 20px;
+        }
+        
+        /* Sección Proyectos */
+        #proyectos {
+            background-color: var(--color-blanco);
+        }
+        
+        .galeria-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .proyecto {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: transform 0.3s;
+        }
+        
+        .proyecto:hover {
+            transform: translateY(-10px);
+        }
+        
+        .proyecto-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .proyecto-contenido {
+            padding: 20px;
+            background-color: var(--color-blanco);
+        }
+        
+        .proyecto-contenido h3 {
+            margin-bottom: 10px;
+        }
+        
+        .etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .etiqueta {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Sección Prácticas */
+        #practicas {
+            background-color: var(--color-fondo);
+        }
+        
+        .practica {
+            background-color: var(--color-blanco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+            margin-bottom: 30px;
+        }
+        
+        /* Sección Reflexiones */
+        #reflexiones {
+            background-color: var(--color-blanco);
+        }
+        
+        .reflexion {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .reflexion:last-child {
+            border-bottom: none;
+        }
+        
+        .reflexion h3 {
+            color: var(--color-secundario);
+        }
+        
+        .reflexion-meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        /* Sección Otros */
+        #otros {
+            background-color: var(--color-fondo);
+        }
+        
+        .otros-contenido {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .dafo {
+            background-color: var(--color-blanco);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+        }
+        
+        .dafo h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .dafo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .dafo-item {
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .fortalezas {
+            background-color: #e8f5e9;
+            border: 1px solid #a5d6a7;
+        }
+        
+        .debilidades {
+            background-color: #ffebee;
+            border: 1px solid #ef9a9a;
+        }
+        
+        .oportunidades {
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+        }
+        
+        .amenazas {
+            background-color: #fff8e1;
+            border: 1px solid #ffe082;
+        }
+        
+        /* Sección Contacto */
+        #contacto {
+            background-color: var(--color-blanco);
+        }
+        
+        .formulario-contacto {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--color-fondo);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .red-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            border-radius: 80%;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .red-social:hover {
+            background-color: var(--color-secundario);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-sobre-mi, .cv-container, .otros-contenido {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu {
+                display: none;
+            }
+            
+            .contenido-inicio h1 {
+                font-size: 36px;
+            }
+            
+            .contenido-inicio p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Mi Portafolio</div>
+                <ul class="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#reflexiones">Reflexiones</a></li>
+                    <li><a href="#otros">Otros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio">
+        <div class="container">
+            <div class="contenido-inicio">
+                <img src="./carnet.jpg" alt="Foto de perfil" class="foto-perfil">
+                <h1 style="color: #6494c4;">Hola, soy Diego García</h1>
+                <p>Hola! Soy un estudiante apasionado por la programación y la tecnología. Actualmente estudio para ampliar mis conocimientos en este campo, con el objetivo de crecer tanto a nivel personal como profesional. Mi meta es seguir desarrollando mis habilidades para contribuir a la creación de soluciones innovadoras y eficientes que puedan tener un impacto positivo en la sociedad.</p>
+                <p>"El único modo de hacer un gran trabajo es amar lo que haces" - Steve Jobs</p>
+                <a href="#sobre-mi" class="btn">Conóceme más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="grid-sobre-mi">
+                <div>
+                    <h3>Mi trayectoria</h3>
+                    <p>Soy un apasionado del desarrollo web con formación en Desarrollo de Aplicaciones Web. Actualmente estoy en mi primer año de formación, especializándome en frontend con tecnologías como Html y Css.</p>
+                    <p>Antes de iniciar mis estudios en desarrollo web, trabajé en el sector educativo como profesor particular en informatica, lo que me dio una perspectiva única sobre la importancia de los conocimientos sobre la experiencia de usuario y el diseño centrado en el cliente.</p>
+                    
+                    <h3>Mis valores</h3>
+                    <p>Creo en el aprendizaje continuo, la colaboración y la creación de soluciones que realmente impacten positivamente en la vida de las personas. Valoro la creatividad, la atención al detalle y el código limpio.</p>
+                </div>
+                <div>
+                    <h3>Mis habilidades</h3>
+                    <div class="habilidades">
+                        <div class="habilidad">
+                            <p>HTML</p>
+                            <div class="barra-habilidad">
+                                <div class="nivel-habilidad" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="habilidad">
+                            <p>Css</p>
+                            <div class="barra-habilidad">
+                                <div class="nivel-habilidad" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="habilidad">
+                            <p>Java</p>
+                            <div class="barra-habilidad">
+                                <div class="nivel-habilidad" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="habilidad">
+                            <p>Figma</p>
+                            <div class="barra-habilidad">
+                                <div class="nivel-habilidad" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="habilidad">
+                            <p>Diseño UI/UX</p>
+                            <div class="barra-habilidad">
+                                <div class="nivel-habilidad" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Relación con el ciclo formativo</h3>
+                    <p>Elegí este ciclo porque combina perfectamente mi pasión por la tecnología y la creatividad. Mi objetivo es especializarme en desarrollo frontend, creando interfaces atractivas y funcionales que mejoren la experiencia de usuario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CV -->
+    <section id="cv">
+        <div class="container">
+            <h2>Currículum Vitae</h2>
+            <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="./Captura de pantalla (98).png" alt="Currículum" style="max-width: 100%; height: auto; border: 5px solid var(--color-secundario); border-radius: 10px; box-shadow: var(--sombra);">
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+            <a href="./Currículum Vitae Diego García Senciales.pdf" class="btn" style="text-decoration: none;">Descargar CV</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos Realizados</h2>
+            <p>Estos son algunos de los proyectos que he desarrollado durante mi formación y tiempo libre.</p>
+            
+            <div class="galeria-proyectos">
+                <div class="proyecto">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proyecto 1" class="proyecto-img">
+                    <div class="proyecto-contenido">
+                        <h3>Tienda Online de Zapatos</h3>
+                        <p>Plataforma e-commerce para venta de zapatos con carrito de compras.</p>
+                        <div class="etiquetas">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">Css</span>
+                            <span class="etiqueta">JavaScript</span>
+                        </div>
+                        <p><strong>Aprendizaje:</strong>Estructuras de Html con vinculacion a JS.</p>
+                        <a href="https://github.com/DIEGUSPLAY12/MIS_PROJECTOS/tree/main/trabajos/Proyectos%20personales/PERSONAL_PROJECT_01" class="btn" style="margin-top: 10px;">Ver proyecto</a>
+                    </div>
+                </div>
+                
+                <div class="proyecto">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proyecto 2" class="proyecto-img">
+                    <div class="proyecto-contenido">
+                        <h3>Mini projectos de iniciacion en DAW</h3>
+                        <p>Projectos de aprendizaje inicial de lenguajes basicos.</p>
+                        <div class="etiquetas">
+                            <span class="etiqueta">Html</span>
+                            <span class="etiqueta">CSS</span>
+                            <span class="etiqueta">XML</span>
+                            <span class="etiqueta">JavaScript</span>
+                        </div>
+                        <p><strong>Aprendizaje:</strong> Uso correcto de Css.</p>
+                        <a href="https://github.com/La-Salle-Gracia-FP/html-css-DIEGUSPLAY12" class="btn" style="margin-top: 10px;">Ver proyecto</a>
+                    </div>
+                </div>
+                
+                <div class="proyecto">
+                    <img src="./image.img.jpg" alt="Proyecto 3" class="proyecto-img">
+                    <div class="proyecto-contenido">
+                        <h3>FutDraft</h3>
+                        <p>Programa de creacion de plantillas de futbol 1vs1.</p>
+                        <div class="etiquetas">
+                            <span class="etiqueta">Java</span>
+                        </div>
+                        <p><strong>Aprendizaje:</strong> Uso de control de errores y Exceptions.</p>
+                        <a href="https://github.com/LaSalleGracia-Programacio/24-25-pr-ctica-i-equipo-4" class="btn" style="margin-top: 10px;">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reflexiones -->
+    <section id="reflexiones">
+        <div class="container">
+            <h2>Reflexiones Personales <br></h2>
+            
+            <div class="reflexion">
+                 <h3>Lo que he aprendido hasta ahora</h3>
+                    
+                 <p>Durante este primer año del ciclo de Desarrollo de Aplicaciones Web, he tenido la oportunidad de sentar unas bases sólidas en programación. Aunque al principio todo era nuevo y un poco abrumador, poco a poco he ido entendiendo conceptos como estructuras de control, funciones y programación orientada a objetos. Asignaturas como Entornos de Desarrollo y Bases de Datos me han ayudado a comprender mejor cómo se organiza el trabajo de un desarrollador.</p>
+                 <p>Además de lo técnico, he aprendido a ser más organizado y constante en mi trabajo. La práctica diaria ha sido clave para ir mejorando, y he empezado a valorar la importancia de escribir código limpio y bien documentado.</p>
+            </div>
+
+            <div class="reflexion">
+                <h3>Retos actuales y próximos objetivos</h3>
+                
+                <p>Uno de los retos que estoy enfrentando ahora es aprender a manejar frameworks y herramientas nuevas, como Java y Git. Aunque a veces resulta difícil adaptarse a tantos conceptos nuevos, me esfuerzo por practicar fuera de clase y buscar recursos adicionales para reforzar lo aprendido.</p>
+                <p>De cara a lo que queda de curso, me he propuesto mejorar mi capacidad para resolver problemas de forma autónoma y fortalecer mis conocimientos en JavaScript. También quiero empezar a explorar el backend, ya que sé que será fundamental para los proyectos del próximo año. Mi objetivo es terminar el curso sintiéndome seguro con las bases para poder avanzar a retos más complejos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Otros -->
+    <section id="otros">
+        <div class="container">
+            <h2>Otros</h2>
+            
+            <div class="otros-contenido">
+                <div>
+                    <h3>Videocurrículum</h3>
+                    <div style="background-color: #000; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 30px;">
+                        <a href="https://drive.google.com/file/d/1faEriNcnrD5ZFdlQM3QztiVPEtezUhf1/view?usp=sharing" target="_blank">
+                            <img src="./Captura de pantalla (99).png" alt="Videocurrículum" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                        </a>
+                    </div>
+                    
+                    <h3>Elevator Pitch</h3>
+                     <div style="background-color: #000; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 30px;">
+                        <a href="https://drive.google.com/file/d/17lHRYqZwmI-bVBD3jdQVA21dGnWX_dpB/view?usp=sharing" target="_blank">
+                            <img src="./Captura de pantalla (100).png" alt="Videocurrículum" style="width: 100%; height: 100%; border-radius: 10px; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3>DAFO Personal</h3>
+                    <div style="text-align: center;"></div>
+                        <img src="./Captura de pantalla (101).png" alt="DAFO Personal" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: var(--sombra);">
+                        <div>
+                    <h3><br>Certificaciones</h3>
+                    <div style="background-color: #000; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 30px;">
+                    <ul style="margin-top: 20px; list-style-type: disc; padding-left: 20px;">
+                        <li style="color: white;">Certificado de Git y GitHub : GitHub Learning Lab. <br><br></li>
+                        <li style="color: white;">Certificado de HTML: FreeCodeCamp. <br><br></li>
+                        <li style="color: white;">Certificados de inglés B2. <br></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Quieres ponerte en contacto conmigo? Envíame un mensaje y te responderé lo antes posible. <br><br></p>
+            
+            <div class="formulario-contacto">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </form>
+            </div>
+            
+            <div class="redes-sociales">
+                <a href="#" class="red-social">
+                    <img src="./linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+                </a> <!-- LinkedIn -->
+                <a href="#" class="red-social">
+                    <img src="./github.png" alt="GitHub" style="width: 40px; height: 40px;">
+                </a> <!-- GitHub -->
+                <a href="#" class="red-social">
+                    <img src="./circulo.png" alt="Teléfono" style="width: 40px; height: 40px;">
+                </a> <!-- Teléfono -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Diego García Senciales - Portafolio Profesional</p>
+            <p>Este portafolio fue creado con HTML5 y CSS3 para mostrar mis habilidades como desarrolladora frontend.</p>
+        </div>
+    </footer>
+</body>
+</html>
