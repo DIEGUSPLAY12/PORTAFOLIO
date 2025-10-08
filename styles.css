@@ -147,12 +147,19 @@
             background-color: var(--color-blanco);
         }
         
-        .grid-sobre-mi {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
+       .grid-sobre-mi {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  gap: 2rem; /* separación entre columnas */
+  align-items: start; /* <-- esto asegura que ambos comiencen desde arriba */
+}
+
+.grid-sobre-mi > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* fuerza el inicio superior */
+}
+
         
         .habilidades {
             margin-top: 30px;
