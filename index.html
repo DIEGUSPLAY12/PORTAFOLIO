@@ -1,238 +1,332 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Profesional</title>
-    <link rel="stylesheet" href="styles.css">
-    
-
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mi Portafolio Profesional</title>
+	<!-- Fuentes y Tailwind -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] },
+					colors: { brand: '#6494c4', ink: '#0b1220' },
+					boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' }
+				}
+			}
+		}
+	</script>
+	<meta name="theme-color" content="#0b1220" />
 </head>
-<body>
-    <!-- Header y navegación -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Mi Portafolio</div>
-                <ul class="menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#reflexiones">Reflexiones</a></li>
-                    <li><a href="#otros">Otros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="bg-slate-950 text-slate-200 font-sans">
+	<!-- Header -->
+	<header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-white/10">
+		<div class="max-w-7xl mx-auto px-4">
+			<nav class="flex items-center justify-between py-3">
+				<a href="#inicio" class="text-white font-semibold tracking-wide">Mi Portafolio</a>
+				<button id="menuBtn" class="md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 text-slate-200 hover:bg-white/5" aria-label="Abrir menú" aria-expanded="false">☰</button>
+				<ul class="hidden md:flex items-center gap-2">
+					<li><a href="#inicio" class="px-3 py-2 rounded-lg hover:bg-white/10 data-[active=true]:bg-white/10" data-link>Inicio</a></li>
+					<li><a href="#sobre-mi" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Sobre mí</a></li>
+					<li><a href="#cv" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>CV</a></li>
+					<li><a href="#proyectos" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Proyectos</a></li>
+					<li><a href="#reflexiones" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Reflexiones</a></li>
+					<li><a href="#otros" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Otros</a></li>
+					<li><a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Contacto</a></li>
+				</ul>
+			</nav>
+			<ul id="mobileMenu" class="md:hidden hidden flex-col gap-1 p-2 border-t border-white/10">
+				<li><a href="#inicio" class="block px-3 py-2 rounded-lg hover:bg-white/10">Inicio</a></li>
+				<li><a href="#sobre-mi" class="block px-3 py-2 rounded-lg hover:bg-white/10">Sobre mí</a></li>
+				<li><a href="#cv" class="block px-3 py-2 rounded-lg hover:bg-white/10">CV</a></li>
+				<li><a href="#proyectos" class="block px-3 py-2 rounded-lg hover:bg-white/10">Proyectos</a></li>
+				<li><a href="#reflexiones" class="block px-3 py-2 rounded-lg hover:bg-white/10">Reflexiones</a></li>
+				<li><a href="#otros" class="block px-3 py-2 rounded-lg hover:bg-white/10">Otros</a></li>
+				<li><a href="#contacto" class="block px-3 py-2 rounded-lg hover:bg-white/10">Contacto</a></li>
+			</ul>
+		</div>
+	</header>
 
-    <!-- Sección Inicio -->
-    <section id="inicio">
-        <div class="container">
-            <div class="contenido-inicio">
-                <img src="./IMG/carnet.jpg" alt="Foto de perfil" class="foto-perfil">
-                <h1 style="color: #6494c4;">Hola, soy Diego García</h1>
-                <p>Hola! Soy un estudiante apasionado por la programación y la tecnología. Actualmente estudio para ampliar mis conocimientos en este campo, con el objetivo de crecer tanto a nivel personal como profesional. Mi meta es seguir desarrollando mis habilidades para contribuir a la creación de soluciones innovadoras y eficientes que puedan tener un impacto positivo en la sociedad.</p>
-                <p>"El único modo de hacer un gran trabajo es amar lo que haces" - Steve Jobs</p>
-                <a href="#sobre-mi" class="btn">Conóceme más</a>
-            </div>
-        </div>
-    </section>
+	<!-- Hero -->
+	<section id="inicio" class="relative overflow-hidden py-24 bg-gradient-to-b from-slate-900 to-slate-950">
+		<div class="max-w-7xl mx-auto px-4 grid place-items-center text-center gap-4">
+			<img src="./IMG/carnet.jpg" alt="Foto de perfil" class="w-36 h-36 object-cover rounded-full ring-4 ring-brand/40 shadow-xl" loading="lazy" />
+			<h1 class="text-3xl sm:text-4xl font-bold text-brand">Hola, soy Diego García</h1>
+			<p class="max-w-3xl text-slate-300">
+				Hola! Soy un estudiante apasionado por la programación y la tecnología. Actualmente estudio para ampliar mis conocimientos en este campo, con el objetivo de crecer tanto a nivel personal como profesional. Mi meta es seguir desarrollando mis habilidades para contribuir a soluciones innovadoras con impacto positivo.
+			</p>
+			<p class="text-slate-400 italic">"El único modo de hacer un gran trabajo es amar lo que haces" - Steve Jobs</p>
+			<div class="flex flex-wrap items-center gap-3 justify-center">
+				<a href="#sobre-mi" class="inline-block px-5 py-3 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">Conóceme más</a>
+				<a href="#contacto" class="inline-block px-5 py-3 rounded-full border border-white/10 hover:bg-white/5 transition">Contactar</a>
+			</div>
+		</div>
+		<div class="pointer-events-none absolute -top-24 right-0 w-[28rem] h-[28rem] bg-brand/10 blur-3xl rounded-full"></div>
+	</section>
 
-    <!-- Sección Sobre mí -->
-    <section id="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí<br> <br></h2>
-            <div class="grid-sobre-mi">
-                <div>
-                    <h3>Mi trayectoria</h3>
-                    <p>Soy un apasionado del desarrollo web con formación en Desarrollo de Aplicaciones Web. Actualmente estoy en mi primer año de formación, especializándome en frontend con tecnologías como Html y Css.</p>
-                    <p>Antes de iniciar mis estudios en desarrollo web, trabajé en el sector educativo como profesor particular en informatica, lo que me dio una perspectiva única sobre la importancia de los conocimientos sobre la experiencia de usuario y el diseño centrado en el cliente.</p>
-                    
-                    <h3>Mis valores</h3>
-                    <p>Creo en el aprendizaje continuo, la colaboración y la creación de soluciones que realmente impacten positivamente en la vida de las personas. Valoro la creatividad, la atención al detalle y el código limpio.</p>
-                </div>
-                <div>
-                    <h3>Mis habilidades</h3>
-                    <div class="habilidades">
-                        <div class="habilidad">
-                            <p>HTML</p>
-                            <div class="barra-habilidad">
-                                <div class="nivel-habilidad" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <p>Css</p>
-                            <div class="barra-habilidad">
-                                <div class="nivel-habilidad" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <p>Java</p>
-                            <div class="barra-habilidad">
-                                <div class="nivel-habilidad" style="width: 60%;"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <p>Figma</p>
-                            <div class="barra-habilidad">
-                                <div class="nivel-habilidad" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <p>Diseño UI/UX</p>
-                            <div class="barra-habilidad">
-                                <div class="nivel-habilidad" style="width: 75%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3>Relación con el ciclo formativo</h3>
-                    <p>Elegí este ciclo porque combina perfectamente mi pasión por la tecnología y la creatividad. Mi objetivo es especializarme en desarrollo frontend, creando interfaces atractivas y funcionales que mejoren la experiencia de usuario.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<!-- Sobre mí -->
+	<section id="sobre-mi" class="py-20">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-10">Sobre mí</h2>
+			<div class="grid gap-10 md:grid-cols-2">
+				<div class="space-y-6" data-reveal>
+					<h3 class="text-xl font-semibold">Mi trayectoria</h3>
+					<p class="text-slate-300">
+						Soy un apasionado del desarrollo web con formación en Desarrollo de Aplicaciones Web. Actualmente estoy en mi primer año de formación, especializándome en frontend con tecnologías como HTML y CSS.
+					</p>
+					<p class="text-slate-300">
+						Antes de iniciar mis estudios en desarrollo web, trabajé en el sector educativo como profesor particular en informática, lo que me dio una perspectiva única sobre la importancia de la experiencia de usuario y el diseño centrado en el cliente.
+					</p>
+					<h3 class="text-xl font-semibold">Mis valores</h3>
+					<p class="text-slate-300">
+						Creo en el aprendizaje continuo, la colaboración y crear soluciones que impacten positivamente. Valoro la creatividad, la atención al detalle y el código limpio.
+					</p>
+					<h3 class="text-xl font-semibold">Relación con el ciclo formativo</h3>
+					<p class="text-slate-300">
+						Elegí este ciclo porque combina tecnología y creatividad. Mi objetivo es especializarme en desarrollo frontend, creando interfaces atractivas y funcionales.
+					</p>
+				</div>
+				<div class="space-y-6" data-reveal>
+					<h3 class="text-xl font-semibold">Mis habilidades</h3>
+					<div class="space-y-5">
+						<!-- Barra -->
+						<div>
+							<div class="flex justify-between mb-2"><span>HTML</span><span>90%</span></div>
+							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+								<div class="h-full bg-gradient-to-r from-brand to-teal-400 w-0" data-skill data-level="90"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2"><span>CSS</span><span>70%</span></div>
+							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+								<div class="h-full bg-gradient-to-r from-brand to-teal-400 w-0" data-skill data-level="70"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2"><span>Java</span><span>60%</span></div>
+							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+								<div class="h-full bg-gradient-to-r from-brand to-teal-400 w-0" data-skill data-level="60"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2"><span>Figma</span><span>70%</span></div>
+							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+								<div class="h-full bg-gradient-to-r from-brand to-teal-400 w-0" data-skill data-level="70"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2"><span>Diseño UI/UX</span><span>75%</span></div>
+							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+								<div class="h-full bg-gradient-to-r from-brand to-teal-400 w-0" data-skill data-level="75"></div>
+							</div>
+						</div>
+					</div>
+					<p class="text-slate-400 text-sm">Las barras se animan al entrar en pantalla.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Sección CV -->
-    <section id="cv">
-        <div class="container">
-            <h2>Currículum Vitae</h2>
-            <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-            <img src="./IMG/Captura de pantalla (98).png" alt="Currículum" style="max-width: 100%; height: auto; border: 5px solid var(--color-secundario); border-radius: 10px; box-shadow: var(--sombra);">
-            </div>
+	<!-- CV -->
+	<section id="cv" class="py-20">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-8">Currículum Vitae</h2>
+			<div class="flex justify-center">
+				<img src="./IMG/Captura de pantalla (98).png" alt="Currículum" loading="lazy" class="max-w-full h-auto rounded-xl border border-white/10 shadow-soft" />
+			</div>
+			<div class="text-center mt-6">
+				<a href="Currículum Vitae Diego García Senciales.pdf" class="inline-block px-5 py-3 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">Descargar CV</a>
+			</div>
+		</div>
+	</section>
 
-            <div style="text-align: center; margin-top: 20px;">
-            <a href="Currículum Vitae Diego García Senciales.pdf" class="btn" style="text-decoration: none;">Descargar CV</a>
-            </div>
-        </div>
-        
-    </section>
+	<!-- Proyectos -->
+	<section id="proyectos" class="py-20">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-2">Proyectos Realizados</h2>
+			<p class="text-slate-300 mb-8">Estos son algunos de los proyectos que he desarrollado durante mi formación y tiempo libre.</p>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos">
-        <div class="container">
-            <h2>Proyectos Realizados</h2>
-            <p>Estos son algunos de los proyectos que he desarrollado durante mi formación y tiempo libre.</p>
-            
-            <div class="galeria-proyectos">
-                <div class="proyecto">
-                    <img src="/IMG/zapatos-bespoke-que-son-y-como-usar-con-estilo.webp" alt="Proyecto 1" class="proyecto-img">
-                    <div class="proyecto-contenido">
-                        <h3>Tienda Online de Zapatos</h3>
-                        <p>Plataforma e-commerce para venta de zapatos con carrito de compras.</p>
-                        <div class="etiquetas">
-                            <span class="etiqueta">HTML</span>
-                            <span class="etiqueta">Css</span>
-                            <span class="etiqueta">JavaScript</span>
-                        </div>
-                        <p><strong>Aprendizaje:</strong>Estructuras de Html con vinculacion a JS.</p>
-                        <a href="https://github.com/DIEGUSPLAY12/MIS_PROJECTOS/tree/main/trabajos/Proyectos%20personales/PERSONAL_PROJECT_01" class="btn" style="margin-top: 10px;">Ver proyecto</a>
-                    </div>
-                </div>
-                
-                <div class="proyecto">
-                    <img src="./IMG/código-fuente-de-programación-equipo-tecnología-moderna-aplicación-codificación-por-desarrollador-programadores-software-en-241804713.webp" alt="Proyecto 2" class="proyecto-img">
-                    <div class="proyecto-contenido">
-                        <h3>Mini projectos de iniciacion en DAW</h3>
-                        <p>Projectos de aprendizaje inicial de lenguajes basicos.</p>
-                        <div class="etiquetas">
-                            <span class="etiqueta">Html</span>
-                            <span class="etiqueta">CSS</span>
-                            <span class="etiqueta">XML</span>
-                            <span class="etiqueta">JavaScript</span>
-                        </div>
-                        <p><strong>Aprendizaje:</strong> Uso correcto de Css.</p>
-                        <a href="https://github.com/La-Salle-Gracia-FP/html-css-DIEGUSPLAY12" class="btn" style="margin-top: 10px;">Ver proyecto</a>
-                    </div>
-                </div>
-                
-                <div class="proyecto">
-                    <img src="./IMG/image.img.jpg" alt="Proyecto 3" class="proyecto-img">
-                    <div class="proyecto-contenido">
-                        <h3>FutDraft</h3>
-                        <p>Programa de creacion de plantillas de futbol 1vs1.</p>
-                        <div class="etiquetas">
-                            <span class="etiqueta">Java</span>
-                        </div>
-                        <p><strong>Aprendizaje:</strong> Uso de control de errores y Exceptions.</p>
-                        <a href="https://github.com/LaSalleGracia-Programacio/24-25-pr-ctica-i-equipo-4" class="btn" style="margin-top: 10px;">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<!-- Proyecto 1 -->
+				<article class="rounded-xl overflow-hidden bg-slate-900 border border-white/10 shadow transition hover:-translate-y-1 hover:shadow-xl" data-reveal>
+					<img src="./IMG/zapatos-bespoke-que-son-y-como-usar-con-estilo.webp" alt="Tienda Online de Zapatos" class="w-full h-44 object-cover" loading="lazy" decoding="async" />
+					<div class="p-4">
+						<h3 class="text-xl font-semibold">Tienda Online de Zapatos</h3>
+						<p class="text-slate-300">Plataforma e-commerce para venta de zapatos con carrito de compras.</p>
+						<div class="flex flex-wrap gap-2 my-2">
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">HTML</span>
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">CSS</span>
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">JavaScript</span>
+						</div>
+						<p class="text-slate-400 text-sm"><strong>Aprendizaje:</strong> Estructuras de HTML con vinculación a JS.</p>
+						<a href="https://github.com/DIEGUSPLAY12/MIS_PROJECTOS/tree/main/trabajos/Proyectos%20personales/PERSONAL_PROJECT_01" target="_blank" rel="noopener" class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold">Ver proyecto</a>
+					</div>
+				</article>
 
-    <!-- Sección Reflexiones -->
-    <section id="reflexiones">
-        <div class="container">
-            <h2>Reflexiones Personales <br></h2>
-            
-            <div class="reflexion">
-                 <h3>Lo que he aprendido hasta ahora</h3>
-                    
-                 <p>Durante este primer año del ciclo de Desarrollo de Aplicaciones Web, he tenido la oportunidad de sentar unas bases sólidas en programación. Aunque al principio todo era nuevo y un poco abrumador, poco a poco he ido entendiendo conceptos como estructuras de control, funciones y programación orientada a objetos. Asignaturas como Entornos de Desarrollo y Bases de Datos me han ayudado a comprender mejor cómo se organiza el trabajo de un desarrollador.</p>
-                 <p>Además de lo técnico, he aprendido a ser más organizado y constante en mi trabajo. La práctica diaria ha sido clave para ir mejorando, y he empezado a valorar la importancia de escribir código limpio y bien documentado.</p>
-            </div>
+				<!-- Proyecto 2 -->
+				<article class="rounded-xl overflow-hidden bg-slate-900 border border-white/10 shadow transition hover:-translate-y-1 hover:shadow-xl" data-reveal>
+					<img src="./IMG/código-fuente-de-programación-equipo-tecnología-moderna-aplicación-codificación-por-desarrollador-programadores-software-en-241804713.webp" alt="Mini proyectos de iniciación en DAW" class="w-full h-44 object-cover" loading="lazy" decoding="async" />
+					<div class="p-4">
+						<h3 class="text-xl font-semibold">Mini proyectos de iniciación en DAW</h3>
+						<p class="text-slate-300">Proyectos de aprendizaje inicial de lenguajes básicos.</p>
+						<div class="flex flex-wrap gap-2 my-2">
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">HTML</span>
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">CSS</span>
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">XML</span>
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">JavaScript</span>
+						</div>
+						<p class="text-slate-400 text-sm"><strong>Aprendizaje:</strong> Uso correcto de CSS.</p>
+						<a href="https://github.com/La-Salle-Gracia-FP/html-css-DIEGUSPLAY12" target="_blank" rel="noopener" class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold">Ver proyecto</a>
+					</div>
+				</article>
 
-            <div class="reflexion">
-                <h3>Retos actuales y próximos objetivos</h3>
-                
-                <p>Uno de los retos que estoy enfrentando ahora es aprender a manejar frameworks y herramientas nuevas, como Java y Git. Aunque a veces resulta difícil adaptarse a tantos conceptos nuevos, me esfuerzo por practicar fuera de clase y buscar recursos adicionales para reforzar lo aprendido.</p>
-                <p>De cara a lo que queda de curso, me he propuesto mejorar mi capacidad para resolver problemas de forma autónoma y fortalecer mis conocimientos en JavaScript. También quiero empezar a explorar el backend, ya que sé que será fundamental para los proyectos del próximo año. Mi objetivo es terminar el curso sintiéndome seguro con las bases para poder avanzar a retos más complejos.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Sección Contacto -->
-    <section id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>¿Quieres ponerte en contacto conmigo? Envíame un mensaje y te responderé lo antes posible. <br><br></p>
-            
-            <div class="formulario-contacto">
-                <form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="asunto">Asunto:</label>
-                        <input type="text" id="asunto" name="asunto" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar mensaje</button>
-                </form>
-            </div>
-            
-            <div class="redes-sociales">
-                <a href="#" class="red-social">
-                    <img src="./IMG/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
-                </a> <!-- LinkedIn -->
-                <a href="#" class="red-social">
-                    <img src="./IMG/github.png" alt="GitHub" style="width: 40px; height: 40px;">
-                </a> <!-- GitHub -->
-                <a href="#" class="red-social">
-                    <img src="./IMG/circulo.png" alt="Teléfono" style="width: 40px; height: 40px;">
-                </a> <!-- Teléfono -->
-            </div>
-        </div>
-    </section>
+				<!-- Proyecto 3 -->
+				<article class="rounded-xl overflow-hidden bg-slate-900 border border-white/10 shadow transition hover:-translate-y-1 hover:shadow-xl" data-reveal>
+					<img src="./IMG/image.img.jpg" alt="FutDraft" class="w-full h-44 object-cover" loading="lazy" decoding="async" />
+					<div class="p-4">
+						<h3 class="text-xl font-semibold">FutDraft</h3>
+						<p class="text-slate-300">Programa de creación de plantillas de fútbol 1vs1.</p>
+						<div class="flex flex-wrap gap-2 my-2">
+							<span class="text-xs px-2 py-1 rounded-full bg-white/10 border border-white/10">Java</span>
+						</div>
+						<p class="text-slate-400 text-sm"><strong>Aprendizaje:</strong> Control de errores y Exceptions.</p>
+						<a href="https://github.com/LaSalleGracia-Programacio/24-25-pr-ctica-i-equipo-4" target="_blank" rel="noopener" class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold">Ver proyecto</a>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Diego García Senciales - Portafolio Profesional</p>
-            <p>Este portafolio fue creado con HTML5 y CSS3 para mostrar mis habilidades como desarrolladora frontend.</p>
-        </div>
-    </footer>
+	<!-- Reflexiones -->
+	<section id="reflexiones" class="py-20">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-8">Reflexiones Personales</h2>
+			<div class="space-y-6">
+				<article class="space-y-3 bg-slate-900/60 border border-white/10 rounded-xl p-5 shadow-soft" data-reveal>
+					<h3 class="text-xl font-semibold">Lo que he aprendido hasta ahora</h3>
+					<p class="text-slate-300">Durante este primer año del ciclo de Desarrollo de Aplicaciones Web, he tenido la oportunidad de sentar unas bases sólidas en programación. Aunque al principio todo era nuevo y un poco abrumador, poco a poco he ido entendiendo conceptos como estructuras de control, funciones y programación orientada a objetos. Asignaturas como Entornos de Desarrollo y Bases de Datos me han ayudado a comprender mejor cómo se organiza el trabajo de un desarrollador.</p>
+					<p class="text-slate-300">Además de lo técnico, he aprendido a ser más organizado y constante en mi trabajo. La práctica diaria ha sido clave para ir mejorando, y he empezado a valorar la importancia de escribir código limpio y bien documentado.</p>
+				</article>
+				<article class="space-y-3 bg-slate-900/60 border border-white/10 rounded-xl p-5 shadow-soft" data-reveal>
+					<h3 class="text-xl font-semibold">Retos actuales y próximos objetivos</h3>
+					<p class="text-slate-300">Uno de los retos que estoy enfrentando ahora es aprender a manejar frameworks y herramientas nuevas, como Java y Git. Aunque a veces resulta difícil adaptarse a tantos conceptos nuevos, me esfuerzo por practicar fuera de clase y buscar recursos adicionales para reforzar lo aprendido.</p>
+					<p class="text-slate-300">De cara a lo que queda de curso, me he propuesto mejorar mi capacidad para resolver problemas de forma autónoma y fortalecer mis conocimientos en JavaScript. También quiero empezar a explorar el backend. Mi objetivo es terminar el curso con bases sólidas para avanzar a retos más complejos.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Otros -->
+	<section id="otros" class="py-16">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-6">Otros</h2>
+			<p class="text-slate-300">Certificados, intereses y recursos adicionales disponibles bajo petición.</p>
+		</div>
+	</section>
+
+	<!-- Contacto -->
+	<section id="contacto" class="py-20">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-semibold mb-4">Contacto</h2>
+			<p class="text-slate-300 mb-6">¿Quieres ponerte en contacto conmigo? Envíame un mensaje y te responderé lo antes posible.</p>
+
+			<div class="bg-slate-900/60 border border-white/10 rounded-xl p-6 shadow-soft" data-reveal>
+				<form class="grid gap-4" id="contactForm">
+					<div class="grid gap-1">
+						<label for="nombre" class="text-slate-200">Nombre</label>
+						<input id="nombre" name="nombre" required class="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30" />
+					</div>
+					<div class="grid gap-1">
+						<label for="email" class="text-slate-200">Email</label>
+						<input id="email" type="email" name="email" required class="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30" />
+					</div>
+					<div class="grid gap-1">
+						<label for="asunto" class="text-slate-200">Asunto</label>
+						<input id="asunto" name="asunto" required class="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30" />
+					</div>
+					<div class="grid gap-1">
+						<label for="mensaje" class="text-slate-200">Mensaje</label>
+						<textarea id="mensaje" name="mensaje" required class="w-full px-3 py-2 min-h-[120px] rounded-lg bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30"></textarea>
+					</div>
+					<button class="justify-self-start px-5 py-3 rounded-full bg-gradient-to-r from-brand to-teal-400 text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">Enviar mensaje</button>
+				</form>
+			</div>
+
+			<div class="flex gap-3 mt-6">
+				<a href="#" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition">
+					<img src="./IMG/linkedin.png" alt="LinkedIn" class="w-5 h-5" loading="lazy" />
+				</a>
+				<a href="#" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition">
+					<img src="./IMG/github.png" alt="GitHub" class="w-5 h-5" loading="lazy" />
+				</a>
+				<a href="#" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition">
+					<img src="./IMG/circulo.png" alt="Teléfono" class="w-5 h-5" loading="lazy" />
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="border-t border-white/10 bg-slate-900/70">
+		<div class="max-w-7xl mx-auto px-4 py-6 text-center">
+			<p class="text-slate-300">&copy; 2025 Diego García Senciales - Portafolio Profesional</p>
+			<p class="text-slate-400">Este portafolio fue creado con HTML5, Tailwind CSS y JavaScript.</p>
+		</div>
+	</footer>
+
+	<!-- JS: menú, animaciones, sección activa y barras de habilidad -->
+	<script>
+		// Menú responsive
+		const btn = document.getElementById('menuBtn');
+		const mobile = document.getElementById('mobileMenu');
+		btn?.addEventListener('click', () => {
+			const hidden = mobile.classList.toggle('hidden');
+			btn.setAttribute('aria-expanded', hidden ? 'false' : 'true');
+		});
+
+		// Intersection Observer: revelar secciones y animar skills
+		const reveal = new IntersectionObserver((entries) => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					e.target.classList.add('opacity-100','translate-y-0');
+					// skills
+					e.target.querySelectorAll('[data-skill]').forEach(bar => {
+						const lvl = bar.dataset.level || '0';
+						bar.style.width = '0%';
+						bar.style.transition = 'width 900ms ease';
+						requestAnimationFrame(() => bar.style.width = lvl + '%');
+					});
+				}
+			});
+		}, { threshold: .2 });
+
+		document.querySelectorAll('[data-reveal]').forEach(el => {
+			el.classList.add('opacity-0','translate-y-3','transition','duration-700');
+			reveal.observe(el);
+		});
+
+		// Resaltado de link activo
+		const links = [...document.querySelectorAll('[data-link]')];
+		const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+		const spy = new IntersectionObserver((entries) => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					links.forEach(l => l.dataset.active = (l.getAttribute('href') === '#' + e.target.id));
+				}
+			});
+		}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+		sections.forEach(s => spy.observe(s));
+
+		// Formulario: demo de envío
+		document.getElementById('contactForm')?.addEventListener('submit', (ev) => {
+			ev.preventDefault();
+			alert('Mensaje enviado. ¡Gracias por contactarme!');
+			ev.target.reset();
+		});
+	</script>
 </body>
 </html>
