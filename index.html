@@ -62,6 +62,13 @@
 		.token-kwd {
 			color: #c4b5fd
 		}
+
+		/* Estilo para enlace activo */
+		.nav-link.active {
+			background-color: rgba(255, 255, 255, 0.1);
+			color: #22d3ee;
+			font-weight: 600;
+		}
 	</style>
 </head>
 
@@ -78,23 +85,20 @@
 					class="md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 text-slate-200 hover:bg-white/5"
 					aria-label="Abrir menú" aria-expanded="false">☰</button>
 				<ul class="hidden md:flex items-center gap-1">
-					<li><a href="#inicio" class="px-3 py-2 rounded-lg hover:bg-white/10 data-[active=true]:bg-white/10"
-							data-link>Inicio</a></li>
-					<li><a href="#sobre-mi" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Sobre mí</a></li>
-					<li><a href="#cv" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>CV</a></li>
-					<li><a href="#proyectos" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Proyectos</a></li>
-					<li><a href="#reflexiones" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Reflexiones</a>
+					<li><a href="#inicio" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Inicio</a></li>
+					<li><a href="#sobre-mi" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Sobre mí</a></li>
+					<li><a href="#proyectos" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Proyectos</a></li>
+					<li><a href="#reflexiones" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Reflexiones</a>
 					</li>
-					<li><a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-white/10" data-link>Contacto</a></li>
+					<li><a href="#contacto" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Contacto</a></li>
 				</ul>
 			</nav>
 			<ul id="mobileMenu" class="md:hidden hidden flex-col gap-1 p-2 border-t border-white/10">
-				<li><a href="#inicio" class="block px-3 py-2 rounded-lg hover:bg-white/10">Inicio</a></li>
-				<li><a href="#sobre-mi" class="block px-3 py-2 rounded-lg hover:bg-white/10">Sobre mí</a></li>
-				<li><a href="#cv" class="block px-3 py-2 rounded-lg hover:bg-white/10">CV</a></li>
-				<li><a href="#proyectos" class="block px-3 py-2 rounded-lg hover:bg-white/10">Proyectos</a></li>
-				<li><a href="#reflexiones" class="block px-3 py-2 rounded-lg hover:bg-white/10">Reflexiones</a></li>
-				<li><a href="#contacto" class="block px-3 py-2 rounded-lg hover:bg-white/10">Contacto</a></li>
+				<li><a href="#inicio" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Inicio</a></li>
+				<li><a href="#sobre-mi" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Sobre mí</a></li>
+				<li><a href="#proyectos" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Proyectos</a></li>
+				<li><a href="#reflexiones" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Reflexiones</a></li>
+				<li><a href="#contacto" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Contacto</a></li>
 			</ul>
 		</div>
 	</header>
@@ -145,17 +149,14 @@
 					útiles con buen diseño y foco en la experiencia de usuario.
 				</p>
 				<div class="flex flex-wrap gap-3">
-					<a href="#proyectos"
-						class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">
-						<span>Ver proyectos</span>
-					</a>
 					<a href="Currículum Vitae Diego García Senciales.pdf"
-						class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 hover:bg-white/5 transition">
+						class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">
 						<span>Descargar CV</span>
 					</a>
-					<a href="#contacto"
-						class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition">
-						<span>Contacto</span>
+					<a href="#proyectos"
+						class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 hover:bg-white/5 transition">
+
+						<span>Ver proyectos</span>
 					</a>
 				</div>
 				<div class="flex items-center gap-3 text-xs">
@@ -254,29 +255,7 @@
 		</div>
 	</section>
 <hr class="border-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded" />
-	<!-- CV -->
-	 <br><br>
-	<section id="cv" class="py-20">
-		<div class="max-w-7xl mx-auto px-4">
-			<h2 class="text-3xl font-semibold mb-8">Currículum</h2>
-			<div class="grid md:grid-cols-2 gap-6 items-center">
-				<div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft" data-reveal>
-					<img src="./IMG/Captura de pantalla (98).png" alt="Currículum" loading="lazy"
-						class="w-full h-auto rounded-lg" />
-				</div>
-				<div class="space-y-4" data-reveal>
-					<p class="text-slate-300">
-						Formación en DAW y enfoque en frontend. Objetivo: construir productos útiles con código limpio y
-						buen diseño.
-					</p>
-					<a href="Currículum Vitae Diego García Senciales.pdf"
-						class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">Descargar
-						CV</a>
-				</div>
-			</div>
-		</div>
-	</section>
-<hr class="border-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded" />
+	<br><br>
 	<!-- Proyectos -->
 	<section id="proyectos" class="py-20">
 		<div class="max-w-7xl mx-auto px-4">
@@ -308,8 +287,7 @@
 						<p class="text-slate-400 text-sm"><strong>Aprendizaje:</strong> Estructuras HTML + JS.</p>
 						<a href="https://github.com/DIEGUSPLAY12/MIS_PROJECTOS/tree/main/trabajos/Proyectos%20personales/PERSONAL_PROJECT_01"
 							target="_blank" rel="noopener"
-							class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Ver
-							proyecto</a>
+							class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Acceder a github</a>
 					</div>
 				</article>
 
@@ -337,8 +315,8 @@
 						<p class="text-slate-400 text-sm"><strong>Aprendizaje:</strong> Buenas prácticas de CSS.</p>
 						<a href="https://github.com/La-Salle-Gracia-FP/html-css-DIEGUSPLAY12" target="_blank"
 							rel="noopener"
-							class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Ver
-							proyecto</a>
+						class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Acceder a github</a>
+
 					</div>
 				</article>
 
@@ -363,8 +341,8 @@
 						</p>
 						<a href="https://github.com/LaSalleGracia-Programacio/24-25-pr-ctica-i-equipo-4" target="_blank"
 							rel="noopener"
-							class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Ver
-							proyecto</a>
+						class="inline-block mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold">Acceder a github</a>
+
 					</div>
 				</article>
 			</div>
@@ -392,142 +370,117 @@
 		</div>
 	</section>
 
-	<!-- Otros 
-	<section id="otros" class="py-16">
-		<div class="max-w-7xl mx-auto px-4">
-			<h2 class="text-3xl font-semibold mb-6">Otros</h2>
-			<p class="text-slate-300">Certificados, intereses y recursos adicionales disponibles bajo petición.</p>
-		</div>
-	</section> -->
-<hr class="border-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded" />
 	<!-- Contacto -->
-	<section id="contacto" class="py-20">
-		<div class="max-w-7xl mx-auto px-4">
-			<h2 class="text-3xl font-semibold mb-4">Contacto</h2>
-			<p class="text-slate-300 mb-6">¿Quieres ponerte en contacto conmigo? Envíame un mensaje y te responderé lo
-				antes posible.</p><br>
+<section id="contacto" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-4">Contacto</h2>
+        <p class="text-slate-300 mb-6">¿Quieres ponerte en contacto conmigo? Envíame un mensaje y te responderé lo antes posible.</p><br>
 
-			<!-- Redes sociales y contacto mejor estructurado -->
-			<div class="grid md:grid-cols-2 gap-6">
-				<!-- Lado izquierdo: redes, datos y mapa -->
-				<div class="space-y-4">
-					<div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft">
-						<h3 class="text-lg font-semibold text-white mb-3">Redes sociales</h3>
-						<ul class="flex gap-3" role="list">
-							<li>
-								<a href="https://www.linkedin.com/in/diego-garc%C3%ADa-senciales-783870339/" target="_blank" rel="noopener noreferrer"
-									 class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
-									 title="LinkedIn (abre en nueva pestaña)">
-									<!-- LinkedIn SVG -->
-									<svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.04h.07c.67-1.27 2.31-2.6 4.76-2.6 5.09 0 6.03 3.35 6.03 7.7V24h-5V16.5c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8.98z"/>
-									</svg>
-									<span class="sr-only">LinkedIn</span>
-								</a>
-							</li>
-							<li>
-									<a href="https://github.com/DIEGUSPLAY12" target="_blank" rel="noopener noreferrer"
-										class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition overflow-hidden"
-										title="GitHub (abre en nueva pestaña)" aria-label="GitHub - abrir en nueva pestaña">
-										<!-- Reemplaza la ruta por tu foto -->
-										<img src="./IMG/github.png" alt="Foto de perfil" class="w-7 h-7 object-cover rounded-full" loading="lazy" />
-										<span class="sr-only">GitHub</span>
-									</a>
-							</li>
-							<li>
-								<a href="#" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
-									 title="Teléfono / WhatsApp" aria-label="Teléfono o WhatsApp">
-									<!-- Phone SVG -->
-									<svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.27.2 2.48.57 3.6a1 1 0 01-.24 1.02L6.6 10.8z"/>
-									</svg>
-									<span class="sr-only">Teléfono</span>
-								</a>
-							</li>
-							<li>
-								<a href="mailto:hola@diego.dev" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
-									 title="Enviar email" aria-label="Enviar email">
-									<!-- Mail SVG -->
-									<svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-									</svg>
-									<span class="sr-only">Email</span>
-								</a>
-							</li>
-						</ul>
-						<p class="text-slate-300 text-sm mt-3">También puedes escribirme por el formulario.</p>
-						<p class="text-slate-400 text-xs mt-2">Responderé lo antes posible.</p>
-					</div>
+        <!-- Redes sociales encima del formulario; ambos ocupan todo el ancho -->
+        <div class="space-y-6">
+            <!-- Redes sociales: encima -->
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft" data-reveal>
+                <h3 class="text-lg font-semibold text-white mb-3">Redes sociales</h3>
+                <ul class="flex gap-3" role="list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/diego-garc%C3%ADa-senciales-783870339/" target="_blank" rel="noopener noreferrer"
+                           class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                           title="LinkedIn (abre en nueva pestaña)">
+                            <!-- LinkedIn SVG -->
+                            <svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.5 8.98h4.78v2.04h.07c.67-1.27 2.31-2.6 4.76-2.6 5.09 0 6.03 3.35 6.03 7.7V24h-5V16.5c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8.98z"/>
+                            </svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/DIEGUSPLAY12" target="_blank" rel="noopener noreferrer"
+                           class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition overflow-hidden"
+                           title="GitHub (abre en nueva pestaña)" aria-label="GitHub - abrir en nueva pestaña">
+                            <img src="./IMG/github.png" alt="Foto de perfil" class="w-7 h-7 object-cover rounded-full" loading="lazy" />
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                           title="Teléfono / WhatsApp" aria-label="Teléfono o WhatsApp">
+                            <!-- Phone SVG -->
+                            <svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.27.2 2.48.57 3.6a1 1 0 01-.24 1.02L6.6 10.8z"/>
+                            </svg>
+                            <span class="sr-only">Teléfono</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:hola@diego.dev" class="inline-grid place-items-center w-11 h-11 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                           title="Enviar email" aria-label="Enviar email">
+                            <!-- Mail SVG -->
+                            <svg class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-slate-300 text-sm mt-3">También puedes escribirme por el formulario.</p>
+                <p class="text-slate-400 text-xs mt-2">Responderé lo antes posible.</p>
+            </div>
 
-					<div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft">
-						<h3 class="text-lg font-semibold text-white mb-3">Ubicación</h3>
-						<p class="text-slate-300 text-sm mb-3">Colegio de La Salle Gracia · Barcelona</p>
-						<a href="https://www.google.com/maps/place/Colegio+de+La+Salle+Gracia" target="_blank" rel="noopener noreferrer"
-							 class="inline-flex items-center gap-2 text-sm text-slate-200 hover:underline">
-							Ver en Google Maps
-						</a>
+            <!-- Formulario: ocupa todo el ancho debajo de las redes -->
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft" data-reveal>
+                <h3 class="text-lg font-semibold text-white mb-3">Envíame un mensaje</h3>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" id="contactForm" aria-describedby="formMsg" novalidate>
+                    <!-- Honeypot anti-spam (visually hidden) -->
+                    <label class="sr-only" for="website">Website</label>
+                    <input id="website" name="website" type="text" class="hidden" autocomplete="off" />
 
-						<div class="mt-4">
-							<iframe
-								class="w-full h-48 rounded-md border-0"
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.478868482522!2d2.1520076755350215!3d41.407122494771656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a35508611d17%3A0x520ffb2ea020d42!2sColegio%20de%20La%20Salle%20Gracia!5e0!3m2!1ses!2ses!4v1762367580798!5m2!1ses!2ses"
-								allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la ubicación">
-							</iframe>
-						</div>
-					</div>
-				</div>
+                    <!-- Columna izquierda: Nombre, Email, Asunto -->
+                    <div class="space-y-3">
+                        <div class="grid gap-1">
+                            <label for="nombre" class="text-slate-200 text-sm">Nombre</label>
+                            <input id="nombre" name="nombre" required
+                                class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
+                                placeholder="Tu nombre" />
+                        </div>
 
-				<!-- Lado derecho: formulario de contacto (con id y mensaje para JS) -->
-				<div class="bg-slate-900/60 border border-white/10 rounded-xl p-4 shadow-soft" data-reveal>
-					<h3 class="text-lg font-semibold text-white mb-3">Envíame un mensaje</h3>
-					<form class="grid gap-3 text-sm" id="contactForm" aria-describedby="formMsg" novalidate>
-						<!-- Honeypot anti-spam (visually hidden) -->
-						<label class="sr-only" for="website">Website</label>
-						<input id="website" name="website" type="text" class="hidden" autocomplete="off" />
+                        <div class="grid gap-1">
+                            <label for="email" class="text-slate-200 text-sm">Email</label>
+                            <input id="email" type="email" name="email" required
+                                class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
+                                placeholder="tu@ejemplo.com" />
+                        </div>
 
-						<div class="grid gap-1">
-							<label for="nombre" class="text-slate-200 text-sm">Nombre</label>
-							<input id="nombre" name="nombre" required
-										 class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
-										 placeholder="Tu nombre" />
-						</div>
+                        <div class="grid gap-1">
+                            <label for="asunto" class="text-slate-200 text-sm">Asunto</label>
+                            <input id="asunto" name="asunto" required
+                                class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
+                                placeholder="Sobre qué quieres hablar" />
+                        </div>
+                    </div>
 
-						<div class="grid gap-1">
-							<label for="email" class="text-slate-200 text-sm">Email</label>
-							<input id="email" type="email" name="email" required
-										 class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
-										 placeholder="tu@ejemplo.com" />
-						</div>
+                    <!-- Columna derecha: Mensaje -->
+                    <div class="grid gap-1">
+                        <label for="mensaje" class="text-slate-200 text-sm">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required
+                            class="w-full h-full px-2 py-1.5 min-h-[150px] rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
+                            placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
 
-						<div class="grid gap-1">
-							<label for="asunto" class="text-slate-200 text-sm">Asunto</label>
-							<input id="asunto" name="asunto" required
-										 class="w-full px-2 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
-										 placeholder="Sobre qué quieres hablar" />
-						</div>
+                    <!-- Botón de enviar: ocupa todo el ancho -->
+                    <div class="md:col-span-2 flex items-center gap-3 mt-2">
+                        <button type="submit"
+                            class="px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold shadow text-sm hover:shadow-lg hover:-translate-y-0.5 transition">
+                            Enviar mensaje
+                        </button>
+                        <p class="text-slate-400 text-xs">También puedes contactarme por LinkedIn o GitHub.</p>
+                    </div>
 
-						<div class="grid gap-1">
-							<label for="mensaje" class="text-slate-200 text-sm">Mensaje</label>
-							<textarea id="mensaje" name="mensaje" required
-												class="w-full px-2 py-1.5 min-h-[110px] rounded-md bg-white/5 border border-white/10 text-slate-200 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 text-sm"
-												placeholder="Escribe tu mensaje aquí"></textarea>
-						</div>
-
-						<div class="flex items-center gap-3">
-							<button type="submit"
-											class="px-4 py-2 rounded-full bg-gradient-to-r from-brand to-vio text-ink font-semibold shadow text-sm hover:shadow-lg hover:-translate-y-0.5 transition">
-								Enviar mensaje
-							</button>
-							<p class="text-slate-400 text-xs">También puedes contactarme por LinkedIn o GitHub.</p>
-						</div>
-
-						<p id="formMsg" class="opacity-0 translate-y-1 transition text-emerald-400 text-sm mt-2">Mensaje enviado. ¡Gracias!</p>
-					</form>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
+                    <p id="formMsg" class="md:col-span-2 opacity-0 translate-y-1 transition text-emerald-400 text-sm mt-2">Mensaje enviado. ¡Gracias!</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 	<!-- Footer -->
 	<footer class="border-t border-white/10 bg-slate-900/70">
@@ -567,17 +520,32 @@
 			reveal.observe(el);
 		});
 
-		// Resaltado de link activo
-		const links = [...document.querySelectorAll('[data-link]')];
-		const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-		const spy = new IntersectionObserver((entries) => {
-			entries.forEach(e => {
-				if (e.isIntersecting) {
-					links.forEach(l => l.dataset.active = (l.getAttribute('href') === '#' + e.target.id));
+		// Resaltado de link activo - MEJORADO
+		function setActiveLink() {
+			const sections = document.querySelectorAll('section[id]');
+			const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+			
+			let currentSection = '';
+			
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop - 100;
+				const sectionHeight = section.clientHeight;
+				if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+					currentSection = section.getAttribute('id');
 				}
 			});
-		}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-		sections.forEach(s => spy.observe(s));
+			
+			navLinks.forEach(link => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === `#${currentSection}`) {
+					link.classList.add('active');
+				}
+			});
+		}
+
+		// Ejecutar al cargar y al hacer scroll
+		window.addEventListener('scroll', setActiveLink);
+		window.addEventListener('load', setActiveLink);
 
 		// Copiar código
 		document.getElementById('copyBtn')?.addEventListener('click', async () => {
