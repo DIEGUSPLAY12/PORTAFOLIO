@@ -87,6 +87,7 @@
 				<ul class="hidden md:flex items-center gap-1">
 					<li><a href="#inicio" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Inicio</a></li>
 					<li><a href="#sobre-mi" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Sobre mí</a></li>
+					<li><a href="#tecnologias" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Tecnologías</a></li>
 					<li><a href="#proyectos" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Proyectos</a></li>
 					<li><a href="#reflexiones" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200" data-link>Reflexiones</a>
 					</li>
@@ -96,6 +97,7 @@
 			<ul id="mobileMenu" class="md:hidden hidden flex-col gap-1 p-2 border-t border-white/10">
 				<li><a href="#inicio" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Inicio</a></li>
 				<li><a href="#sobre-mi" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Sobre mí</a></li>
+				<li><a href="#tecnologias" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Tecnologías</a></li>
 				<li><a href="#proyectos" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Proyectos</a></li>
 				<li><a href="#reflexiones" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Reflexiones</a></li>
 				<li><a href="#contacto" class="nav-link-mobile block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200">Contacto</a></li>
@@ -169,91 +171,243 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- Sobre mí: Timeline + Stack + Skills -->
-	<section id="sobre-mi" class="py-20">
-		<div class="max-w-7xl mx-auto px-4">
-			<h2 class="text-3xl font-semibold mb-10">Sobre mí</h2>
-			<div class="grid gap-10 lg:grid-cols-3">
-				<!-- Timeline -->
-				<div class="lg:col-span-1 space-y-6" data-reveal>
-					<h3 class="text-xl font-semibold">Trayectoria</h3>
-					<ol class="relative border-l border-white/10 ml-3 space-y-6">
-						<li class="ml-4">
-							<div class="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full bg-brand"></div>
-							<p class="text-sm text-slate-400">2024 - Actualidad</p>
-							<p class="font-semibold">DAW · Frontend</p>
-							<p class="text-slate-300">HTML, CSS, fundamentos de programación y POO.</p>
-						</li>
-						<li class="ml-4">
-							<div class="absolute -left-[7px] mt-1.5 h-3 w-3 rounded-full bg-vio"></div>
-							<p class="text-sm text-slate-400">Antes</p>
-							<p class="font-semibold">Profesor particular de informática</p>
-							<p class="text-slate-300">Desarrollo de pensamiento lógico y UX centrado en personas.</p>
-						</li>
-					</ol>
-				</div>
-
-				<!-- Stack -->
-				<div class="lg:col-span-1 space-y-6" data-reveal>
-					<h3 class="text-xl font-semibold">Stack principal</h3>
-					<div class="flex flex-wrap gap-2">
-						<span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">HTML</span>
-						<span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">CSS</span>
-						<span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Java</span>
-						<span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Figma</span>
-						<span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">UI/UX</span>
-					</div>
-					<p class="text-slate-300">
-						Combino tecnología y diseño para interfaces claras, accesibles y eficaces.
-					</p>
-				</div>
-
-				<!-- Skills -->
-				<div class="lg:col-span-1 space-y-6" data-reveal>
-					<h3 class="text-xl font-semibold">Habilidades</h3>
-					<div class="space-y-5">
-						<div>
-							<div class="flex justify-between mb-2"><span>HTML</span><span>90%</span></div>
-							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-								<div class="h-full bg-gradient-to-r from-brand to-vio w-0" data-skill data-level="90">
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex justify-between mb-2"><span>CSS</span><span>70%</span></div>
-							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-								<div class="h-full bg-gradient-to-r from-brand to-vio w-0" data-skill data-level="70">
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex justify-between mb-2"><span>Java</span><span>60%</span></div>
-							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-								<div class="h-full bg-gradient-to-r from-brand to-vio w-0" data-skill data-level="60">
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex justify-between mb-2"><span>Figma</span><span>70%</span></div>
-							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-								<div class="h-full bg-gradient-to-r from-brand to-vio w-0" data-skill data-level="70">
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="flex justify-between mb-2"><span>Diseño UI/UX</span><span>75%</span></div>
-							<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-								<div class="h-full bg-gradient-to-r from-brand to-vio w-0" data-skill data-level="75">
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
+<!-- Sobre mí: Biografía y Experiencia -->
+<section id="sobre-mi" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-10">Sobre mí</h2>
+        <div class="grid gap-10 lg:grid-cols-2">
+            
+            <!-- Biografía -->
+            <div class="space-y-6" data-reveal>
+                <h3 class="text-xl font-semibold">Mi historia</h3>
+                <div class="bg-slate-900/60 border border-white/10 rounded-xl p-6 shadow-soft">
+                    <p class="text-slate-300 mb-4">
+Soy un estudiante apasionado por la programación y la tecnología. Me interesa seguir desarrollando mis conocimientos y habilidades en el campo de la tecnología, con el objetivo de contribuir a la creación de soluciones innovadoras y eficientes. 
+	                </p>
+					<p class="text-slate-300 mb-4">
+				Me gusta seguir aprendiendo y enfrentar nuevos retos que me ayuden a crecer y participar en proyectos que realmente aporten algo positivo.
+                </p>
+				<p class="text-slate-300 mb-4">
+				Disfruto trabajar en equipo, compartir ideas y aprender de los demás, porque creo que la colaboración es clave para lograr grandes cosas. Además, me motiva la idea de usar la tecnología para resolver problemas reales
+			</p>	
 			</div>
-		</div>
-	</section>
+            </div>
+
+            <!-- Experiencia y Trayectoria -->
+            <div class="space-y-6" data-reveal>
+                <h3 class="text-xl font-semibold">Trayectoria</h3>
+                <ol class="relative border-l border-white/10 ml-3 space-y-8">
+                    <li class="ml-6">
+                        <div class="absolute -left-[11px] mt-1.5 h-4 w-4 rounded-full bg-brand ring-4 ring-slate-900"></div>
+                        <p class="text-sm text-slate-400 mb-1">2024 - Actualidad</p>
+                        <p class="font-semibold text-lg">Desarrollo de Aplicaciones Web</p>
+                        <p class="text-slate-300">Formación en DAW especializándome en frontend, desarrollo de proyectos prácticos y aprendizaje de tecnologías modernas.</p>
+                    </li> 
+					<li class="ml-6">
+						<div class="absolute -left-[11px] mt-1.5 h-4 w-4 rounded-full bg-brand ring-4 ring-slate-900"></div>
+						<p class="text-sm text-slate-400 mb-1">2022 - 2024</p>
+						<p class="font-semibold text-lg">Bachillerato Tecnológico</p>
+						<p class="text-slate-300">Formación en el área tecnológica donde adquirí conocimientos básicos de programación en C++ .</p>
+				    </li>
+
+                    <li class="ml-6">
+                        <div class="absolute -left-[11px] mt-1.5 h-4 w-4 rounded-full bg-vio ring-4 ring-slate-900"></div>
+                        <p class="text-sm text-slate-400 mb-1">2019 - 2022</p>
+                        <p class="font-semibold text-lg">Profesor particular de informática</p>
+                        <p class="text-slate-300">Enseñanza de informática básica, incluyendo el uso de herramientas de Office (Word, Excel, PowerPoint) y conocimientos esenciales para manejar un ordenador de forma práctica y eficiente.</p>
+                    </li>
+                   
+                </ol>
+            </div>
+
+        </div>
+
+        <!-- Valores y Enfoque -->
+        <div class="mt-16" data-reveal>
+            <h3 class="text-xl font-semibold mb-6">Enfoque</h3>
+            <div class="grid gap-6 md:grid-cols-3">
+                <div class="bg-slate-900/60 border border-white/10 rounded-xl p-5 text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-brand/20 flex items-center justify-center">
+                        <span class="text-brand text-xl">✓</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Código Limpio</h4>
+                    <p class="text-slate-300 text-sm">Priorizo la legibilidad, mantenibilidad y buenas prácticas en cada línea de código.</p>
+                </div>
+                <div class="bg-slate-900/60 border border-white/10 rounded-xl p-5 text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-vio/20 flex items-center justify-center">
+                        <span class="text-vio text-xl">👥</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Trabajo en Equipo</h4>
+                    <p class="text-slate-300 text-sm">Creo en la colaboración, comunicación abierta y aprendizaje mutuo.</p>
+                </div>
+                <div class="bg-slate-900/60 border border-white/10 rounded-xl p-5 text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                        <span class="text-emerald-400 text-xl">🚀</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Aprendizaje Continuo</h4>
+                    <p class="text-slate-300 text-sm">Me mantengo actualizado con las últimas tecnologías y mejores prácticas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<br>
+	<hr class="border-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded" />
+<br>
+<!-- Tecnologías -->
+<section id="tecnologias" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-8">Tecnologías</h2>
+        
+        <div class="grid gap-10 lg:grid-cols-2">
+            <!-- Stack principal mejorado -->
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-6 shadow-soft" data-reveal>
+                <h3 class="text-xl font-semibold mb-6">Stack de Desarrollo</h3>
+                <div class="space-y-4">
+                    <!-- Frontend -->
+                    <div>
+                        <h4 class="font-semibold text-brand mb-3">Frontend</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-brand/10 hover:border-brand/30 transition-colors">HTML5</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-brand/10 hover:border-brand/30 transition-colors">CSS3</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-vio/10 hover:border-vio/30 transition-colors">JavaScript</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-vio/10 hover:border-vio/30 transition-colors">TypeScript</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div>
+                        <h4 class="font-semibold text-vio mb-3">Backend & Otros</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-colors">Node.js</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-blue-500/10 hover:border-blue-500/30 transition-colors">PHP</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-orange-500/10 hover:border-orange-500/30 transition-colors">Java</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Herramientas -->
+                    <div>
+                        <h4 class="font-semibold text-emerald-400 mb-3">Herramientas & Diseño</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-purple-500/10 hover:border-purple-500/30 transition-colors">Figma</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-pink-500/10 hover:border-pink-500/30 transition-colors">UI/UX Design</span>
+                            <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-red-500/10 hover:border-red-500/30 transition-colors">Git</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-slate-800/40 rounded-lg border-l-4 border-brand">
+                    <p class="text-slate-300 text-sm">
+                        <span class="font-semibold text-brand">Mi enfoque:</span> Combino tecnología y diseño para crear interfaces claras, accesibles y eficaces. Siempre buscando el equilibrio entre funcionalidad y experiencia de usuario.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Habilidades mejoradas -->
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-6 shadow-soft" data-reveal>
+                <h3 class="text-xl font-semibold mb-6">Nivel de Habilidades</h3>
+                <div class="space-y-5">
+                    <!-- Frontend Skills -->
+                    <div class="space-y-4">
+                        <h4 class="font-semibold text-slate-400 text-sm uppercase tracking-wide">Frontend</h4>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>HTML5</span>
+                                <span class="text-brand">80%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-brand to-cyan-400 w-0" data-skill data-level="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>CSS3</span>
+                                <span class="text-brand">70%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-brand to-cyan-400 w-0" data-skill data-level="70"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript</span>
+                                <span class="text-vio">45%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-vio to-purple-400 w-0" data-skill data-level="45"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>TypeScript</span>
+                                <span class="text-blue-400">30%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-500 to-blue-400 w-0" data-skill data-level="30"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="space-y-4 pt-4 border-t border-white/10">
+                        <h4 class="font-semibold text-slate-400 text-sm uppercase tracking-wide">Backend & Otros</h4>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Node.js</span>
+                                <span class="text-emerald-400">15%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 w-0" data-skill data-level="15	"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>PHP</span>
+                                <span class="text-blue-400">20%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-0" data-skill data-level="20"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Java</span>
+                                <span class="text-orange-400">70%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-orange-400 w-0" data-skill data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Design Skills -->
+                    <div class="space-y-4 pt-4 border-t border-white/10">
+                        <h4 class="font-semibold text-slate-400 text-sm uppercase tracking-wide">Diseño</h4>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Figma</span>
+                                <span class="text-purple-400">70%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400 w-0" data-skill data-level="70"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>UI/UX Design</span>
+                                <span class="text-pink-400">70%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-pink-500 to-pink-400 w-0" data-skill data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
 <hr class="border-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded" />
 	<br><br>
 	<!-- Proyectos -->
