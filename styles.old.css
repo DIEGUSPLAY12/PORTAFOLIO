@@ -1,0 +1,11 @@
+/* Syntax highlighting en el bloque de código */
+.token-kwd { color: #c792ea; }
+.token-key { color: #82aaff; }
+.token-str { color: #c3e88d; }
+
+/* Nav link activo */
+.nav-link.active,
+.nav-link-mobile.active {
+    background-color: rgba(255,255,255,0.1);
+    color: #22d3ee;
+}
