@@ -90,7 +90,7 @@ export default function About() {
           <Reveal direction="up" delay={0.1} className="md:col-span-2 md:row-span-2">
             <div className="group relative glass rounded-3xl overflow-hidden h-full min-h-[260px]">
               <img
-                src="./IMG/carnet.jpg"
+                src={`${import.meta.env.BASE_URL}IMG/carnet.jpg`}
                 alt="Diego García"
                 className="absolute inset-0 w-full h-full object-cover object-center opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
                 loading="lazy"

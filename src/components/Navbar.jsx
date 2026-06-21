@@ -73,8 +73,8 @@ export default function Navbar() {
           </ul>
 
           <a
-            href="Currículum Vitae CV Diego Garcia Senciales spanish.pdf.pdf"
-            download
+            href={`${import.meta.env.BASE_URL}CV-Diego-Garcia-Senciales.pdf`}
+            download="CV-Diego-Garcia-Senciales.pdf"
             className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand hover:bg-indigo-400 text-white text-sm font-semibold transition-all duration-200 hover:shadow-glow hover:-translate-y-0.5"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -120,8 +120,8 @@ export default function Navbar() {
               ))}
               <li className="mt-1 pt-1 border-t border-white/10">
                 <a
-                  href="Currículum Vitae CV Diego Garcia Senciales spanish.pdf.pdf"
-                  download
+                  href={`${import.meta.env.BASE_URL}CV-Diego-Garcia-Senciales.pdf`}
+                  download="CV-Diego-Garcia-Senciales.pdf"
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-brand hover:bg-white/5 transition-colors"
                 >

@@ -73,8 +73,8 @@ export default function Hero() {
             <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-4 pt-1">
               <Magnetic>
                 <a
-                  href="Currículum Vitae CV Diego Garcia Senciales spanish.pdf.pdf"
-                  download="CV_Diego_Garcia_Senciales.pdf"
+                  href={`${import.meta.env.BASE_URL}CV-Diego-Garcia-Senciales.pdf`}
+                  download="CV-Diego-Garcia-Senciales.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand to-cyan-400 text-white font-semibold text-sm shadow-lg hover:shadow-glow transition-shadow duration-300"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -116,7 +116,7 @@ export default function Hero() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-brand to-cyan-400 opacity-60 blur-sm" />
                 <img
-                  src="./IMG/carnet.jpg"
+                  src={`${import.meta.env.BASE_URL}IMG/carnet.jpg`}
                   alt="Diego García"
                   className="relative w-16 h-16 rounded-2xl object-cover"
                   loading="eager"

@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Build output (lo genera GitHub Actions)
+dist
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+*.local
+.vscode/*
+!.vscode/extensions.json
