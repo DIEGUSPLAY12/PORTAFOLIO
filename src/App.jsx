@@ -10,6 +10,8 @@ import Reflections from './components/Reflections'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+//hola
+
 export default function App() {
   return (
     <>
